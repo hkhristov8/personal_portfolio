@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hristo Hristov - Portfolio</title>
+    <style>
+        body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         color: #fff;
+         background-color: rgba(0, 0, 0, 0.99);
+         overflow: auto; /* Ensure scrolling is enabled */
+         }
+         header {
+         background: rgba(0, 0, 0, 0.70);
+         color: #fff;
+         text-align: center;
+         padding: 1em 0;
+         margin: auto;
+         position: sticky;
+         z-index: 1;
+         box-shadow: 0 0 10px rgba(53, 135, 145, 0.5);
+         }
+         .profile-container {
+         display: flex;
+         flex-direction: column; /* Stack items vertically */
+         align-items: center;    /* Center items horizontally */
+         gap: 0.1px;              /* Space between profile picture and text */
+         max-width: 1000px;      /* Optional: Limit the width of the container */
+         margin: 0 auto;        /* Center container */
+         }
+         header img {
+         border-radius: 50%;
+         width: 150px;
+         height: 150px;
+         object-fit: cover;
+         }
+         .contact-info {
+         text-align: right; /* Center text under profile picture */
+         font-size: 14px;
+         padding-right: 70px;
+         }
+         .contact-info p {
+         margin: 5px 0;
+         }
+         h1, h2 {
+         margin: 0.5em 0;
+         }
+         .container {
+         width: 80%;
+         max-width: 1200px;
+         margin: auto;
+         padding: 20px;
+         position: relative;
+         z-index: 1;
+         }
+         .section {
+         background: rgba(0, 0, 0, 0.70);
+         margin: 20px;
+         padding: 20px;
+         border-radius: 20px;
+         box-shadow: 0 0 10px rgba(53, 135, 145, 0.5);
+         z-index: 1;
+         }
+         .section ul {
+         list-style: none;
+         padding: 5; /* Removed padding for list items */
+         }
+         .section ul li {
+         margin-bottom: 20px;
+         }
+         footer {
+         text-align: center;
+         padding: 20px 0;
+         background: rgba(0, 0, 0, 0.8);
+         color: rgb(255, 255, 255);
+         }
+         #anonymous {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         pointer-events: none;
+         z-index: 0; /* Ensure canvas is behind other content */
+         overflow: hidden;
+         }
+         #anonymous canvas {
+         display: block;
+         }
+         .certificates {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 10px;
+         justify-content: center;
+         }
+         .certificate {
+         background: rgba(27, 27, 27, 0.95);
+         border-radius: 8px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+         padding: 10px;
+         text-align: center;
+         width: 250px; /* Adjust width as needed */
+         overflow: hidden;
+         }
+         .certificate h3 {
+         margin: 0 0 10px 0;
+         color: #fff;
+         }
+         .certificate .issuer-logo {
+         width: 100px; /* Adjust size as needed */
+         height: auto;
+         margin-bottom: 10px;
+         }
+         .certificate .certificate-image {
+         width: 100%; /* Ensure image fits within the box */
+         border-radius: 8px;
+         height: auto;
+         }
+         .certificate a {
+         text-decoration: none;
+         color: #0f0; /* Added link color for better visibility */
+         }
+         /* Header logos */
+         .header-logo {
+            width: 40px; /* Set desired size */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 30px; /* Optional: Ensures logos do not exceed container size */
+            margin: 0 0.1px; /* Space between logos */
+            object-fit: contain; /* Ensures content fits within the defined width */
+            border-radius: 0; /* Optional: Removes border-radius */
+}
+         .logos {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1px; /* Space between logos, optional */
+         }
+         .header-content {
+             position: relative; /* Ensure the container is the reference for the absolute positioning */
+        }
+
+        .contact-info {
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: right;
+            padding: 100px; /* Optional: Adjust padding as needed */
+            font-size: 16px;
+        }
+        /* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust container width on mobile */
+        padding: 15px; /* Slightly increased padding */
+    }
+
+    .section {
+        margin: 15px; /* Reduced margin for tighter spacing */
+        padding: 5px; /* Reduced padding for tighter spacing */
+        border-radius: 10px;
+        font-size: 11px;
+    }
+
+    .profile-container {
+        gap: 10px; /* Maintain increased gap for better spacing */
+    }
+
+    header img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .contact-info {
+        font-size: 7px; /* Restore font size */
+        padding-right: 5px; /* Slightly increased padding */
+    }
+
+    .certificate {
+        width: calc(50% - 10px); /* 50% width minus gap */
+        /* This will ensure at least two certificates per row with some gap */
+    }
+
+    .header-logo {
+        width: 15px; /* Adjust header logo size */
+    }
+
+    .logos {
+        gap: 4px; /* Increase gap between logos */
+    }
+
+    .contact-info {
+        padding: 20px 10px; /* Reduced padding for mobile */
+    }
+
+    h1, h2 {
+        font-size: 1.3em; /* Adjust heading sizes for mobile */
+    }
+
+    h3 {
+      font-size: 1.3em; /* Adjust heading sizes for mobile */
+      align-self: center;
+    }s
+     .section ul {
+        padding-left: 2px; /* Remove padding on the left of the list */
+    }
+
+    .section ul li {
+        margin-left: 2px; /* Remove left margin for list items */
+        padding-left: 2px; /* Remove left padding for list items */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info {
+        font-size: 7px; /* Adjust font size */
+        padding-right: 5px; /* Adjust padding for small screens */
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .certificate {
+        width: calc(100% - 10px); /* Full width with gap */
+        /* This will ensure only one certificate per row on very small screens */
+    }
+
+    .section {
+        padding: 5px; /* Further reduced padding for smaller screens */
+        margin: 10px; /* Remove margin for tighter spacing */
+    }
+     .section ul {
+        padding-left: 2px; /* Remove padding on the left of the list */
+    }
+
+    .section ul li {
+        margin-left: 2px; /* Remove left margin for list items */
+        padding-left: 2px; /* Remove left padding for list items */
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="profile-container">
+                <img src="contacts/personal_picture.jpg" alt="Hristo Hristov">
+                <div class="profile-text">
+                    <h1>Hristo Hristov</h1>
+                    <p>DevOps/Unix Engineer</p>
+                </div>
+            </div>
+            <!-- Contact Info Section -->
+            <div class="contact-info">
+                <p>Email: <a href="mailto:hkhristov8@gmail.com" style="text-decoration: none; color: inherit;">hkhristov8@gmail.com</a></p>
+                <p>Phone: +359 895 984 922</p>
+                <p>Location: Dupnitsa, Bulgaria</p>
+            </div>
+        </div>
+        <!-- Logos Section -->
+        <div class="logos">
+            <img src="technologies/docker.svg" alt="Docker Logo" class="header-logo">
+            <img src="technologies/kubernetes.svg" alt="Kubernetes Logo" class="header-logo">
+            <img src="technologies/ansible.svg" alt="Ansible Logo" class="header-logo">
+            <img src="technologies/terraform.svg" alt="Terraform Logo" class="header-logo">
+            <img src="technologies/aws.svg" alt="AWS Logo" class="header-logo">
+            <img src="technologies/red-hat.svg" alt="Red Hat Logo" class="header-logo">
+            <img src="companies/sap.svg" alt="SAP Logo" class="header-logo">
+            <img src="technologies/bash.svg" alt="Bash Logo" class="header-logo">
+            <img src="technologies/python.svg" alt="Python Logo" class="header-logo">
+            <img src="technologies/csharp.svg" alt="C# Logo" class="header-logo">
+            <img src="technologies/mysql.svg" alt="MySQL Logo" class="header-logo">
+            <img src="technologies/jenkins.svg" alt="Jenkins Logo" class="header-logo">
+            <img src="contacts/github.svg" alt="GitHub Logo" class="header-logo">
+            <img src="technologies/dynatrace.svg" alt="Dynatrace Logo" class="header-logo">
+            <img src="technologies/servicenow.svg" alt="ServiceNow Logo" class="header-logo">
+            <img src="technologies/jira.svg" alt="Jira Logo" class="header-logo">
+
+        </div>
+    </header>
+    <div class="container">
+        <section class="section">
+            <h2>About Me</h2>
+            <br>
+            <h3>👋 Hi, I'm Hristo Hristov</h3>
+            <p>I'm a DevOps/Unix Engineer based in Dupnitsa, Bulgaria. My work focuses on cloud operations, performance monitoring, and automation. I'm committed to continuously enhancing my skills and contributing to building efficient, reliable systems
+                by taking a thoughtful, collaborative approach.</p>
+            <h3>💻 My Background</h3>
+            <p>I have experience across cloud environments, programming, and system administration. My passion lies in developing solutions that improve performance, automate workflows, and ensure system stability. I believe in the power of teamwork and
+                continuous learning. I'm always eager to learn from others, and I enjoy sharing my knowledge to help ensure the success of the teams and projects I work on.</p>
+            <a href="https://www.linkedin.com/in/nysgoth/">
+                <img src="contacts/linkedin.svg" alt="LinkedIn Logo" class="header-logo">
+            </a>
+            <a href="https://github.com/jbravoturtle">
+                <img src="contacts/github.svg" alt="GitHub Logo" class="header-logo">
+            </a>
+            <a href="https://www.facebook.com/nysgoth">
+                <img src="contacts/facebook.svg" alt="Facebook Logo" class="header-logo">
+            </a>
+        </section>
+        <section class="section">
+            <h2>🏢 Experience</h2>
+            <ul>
+               <br>
+                <h3 style="display: flex; align-items: center;">
+                <img src="companies/sap.svg" alt="SAP Logo" class="header-logo" style="width: 80px; height: 50px; margin-right: 10px;">
+                <strong>DevOps Engineer</strong> 
+            </h3>
+                <li>Location: Sofia, Bulgaria</li>
+                <li>SAP Labs Bulgaria (01/2023 - Now)</li>
+                <li>
+                    Responsibilities:
+
+                    <ul>
+                        <br>
+                        <li>- Proven experience in cloud operations, performance and availability monitoring</li>
+                        <li>- Strong proficiency in scripting and automation, particularly in the context of availability monitoring</li>
+                        <li>- Excellent problem-solving, troubleshooting and integration skills</li>
+                        <li>- Knowledge of DevOps practices and experience working in agile environments</li>
+                        <li>- Strong communication and teamwork abilities</li>
+                        <br>
+                    </ul>
+                </li>
+
+                <h3 style="display: flex; align-items: center;">
+                <img src="companies/dxc-logo.svg" alt="DXC Technology Logo" style="width: 60px; height: auto; margin-right: 10px;">
+                <strong>Unix System Admin</strong> 
+                <li></li>
+              </h3>
+                <li>Location: Business Park, Sofia, Bulgaria</li>
+                <li>DXC Technology (12/2021 - 01/2023) </li>
+                <li>
+                    Responsibilities:
+
+                    <ul>
+                        <br>
+                        <li>- Installs, configures, and maintains Linux operating systems</li>
+                        <li>- Analyzes and resolves problems associated with the operating system's servers, hardware, applications, and software</li>
+                        <li>- Monitors systems performance and ensures compliance with security standards</li>
+                        <br>
+                    </ul>
+                </li>
+                <h3 style="display: flex; align-items: center; margin: 0;">
+                <img src="companies/cisco-logo.svg" alt="Cisco Logo" style="width: 80px; height: auto; margin-right: 10px;">
+                <strong>Computer Technician </strong>
+              </h3>
+                <br>
+                <li>Location: Veliko Tarnovo, Bulgaria</li>
+                <li>Cisco NetAcad (01/2018 - 06/2018)</li>
+                <li>
+                    Responsibilities:
+
+                    <ul>
+                     <br>
+                        <li>- Installation, configuration, and maintenance of computer hardware and software systems</li>
+                        <li>- Diagnosing and troubleshooting technical issues to ensure optimal performance</li>
+                        <li>- Performing regular maintenance and system updates</li>
+                        <li>- Providing user support and resolving technical problems to minimize downtime</li>
+                        <br>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2>🎓 Education & Training</h2>
+            <ul>
+                <li>
+                  <br>
+                    <strong>Kubernetes</strong> - Software University (SoftUni), Sofia, Bulgaria
+                    <ul>
+                     <br>
+                        <li>- Building and working with Kubernetes clusters</li>
+                        <li>- Detect and debug cluster performance</li>
+                        <li>- Deploy and manage applications in Kubernetes</li>
+                        <li>- Knowing and working with base objects in Kubernetes</li>
+                        <li>- Detect and debug application performance</li>
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <strong>DevOps - Containerization, CI/CD & Monitoring</strong> - Software University (SoftUni), Sofia, Bulgaria
+                    <ul>
+                     <br>
+                        <li>- Installing and working with the ELK Stack</li>
+                        <li>- Installing and working with Jenkins</li>
+                        <li>- Installing and working with Prometheus and Grafana</li>
+                        <li>- Installing and working with Docker</li>
+                        <li>- Working with version control systems (git)</li>
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <strong>DevOps - Infrastructure & Configuration Management</strong> - Software University (SoftUni), Sofia, Bulgaria
+                    <ul>
+                     <br>
+                        <li>- Installing and working with SaltStack</li>
+                        <li>- Installing and working with Chef</li>
+                        <li>- Installing and working with Apache Kafka</li>
+                        <li>- Installing and working with Ansible</li>
+                        <li>- Installing and working Terraform</li>
+                        <li>- Installing and working Puppet</li>
+                        <li>- Installing and working RabbitMQ</li>
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Linux System Administration</strong> - Software University (SoftUni), Sofia, Bulgaria
+                    <ul>
+                     <br>
+                        <li>- Installation and management of software</li>
+                        <li>- Management of users and access rights</li>
+                        <li>- Setting up network connectivity and services</li>
+                        <li>- Install and configure Linux-based operating systems</li>
+                        <li>- Creation of scripts and automation of tasks</li>
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <strong>IT Essentials</strong> - Cisco Networking Academy, Veliko Tarnovo, Bulgaria
+                    <ul>
+                     <br>
+                        <li>- Basics of computer networks</li>
+                        <li>- Work with Routers, Switches, RJ-45, coaxial and optical cables</li>
+                        <li>- Safe workplace procedures</li>
+                        <li>- Working with Packet Tracer (Virtual networking)</li>
+                        <li>- Preventive measures during work and steps to eliminate problems (Analytical thinking)</li>
+                        <li>- OSI and DOD models on the Internet.</li>
+                        <li>- Basics of operating systems (Windows and Linux)</li>
+                        <li>- Assembly of computer components</li>
+                        <li>- Net security</li>
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <strong>C# Database (MS SQL & Entity Framework Core)</strong> - Software University (SoftUni), Sofia, Bulgaria
+                    <ul>
+                     <br>
+                        <li>- Building a database architecture</li>
+                        <li>- Working with a database using ORM</li>
+                        <li>- Data retrieval via LINQ requests</li>
+                        <li>- Using the Database First approach</li>
+                        <li>- Using the Code First approach</li>
+                        <li>- Work with different data formats - XML, JSON</li>
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <strong>C# OOP</strong> - Software University (SoftUni), Sofia, Bulgaria
+                    <ul>
+                     <br>
+                        <li>- Understanding the object-oriented programming paradigm</li>
+                        <li>- Creation of a hierarchy of classes and inheritance</li>
+                        <li>- Data encapsulation</li>
+                        <li>- Application of the principles of object-oriented programming</li>
+                        <li>- Use of Reflection API</li>
+                        <li>- Component & unit testing</li>
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <strong>C# Advanced</strong> - Software University (SoftUni), Sofia, Bulgaria
+                    <ul>
+                     <br>
+                        <li>- Working with multidimensional and associative data structures</li>
+                        <li>- Application of basic algorithms</li>
+                        <li>- Work with data streams, files and directories</li>
+                        <li>- Creation of linear data structures</li>
+                        <li>- Implementation of functional programming</li>
+                        <li>- Create template classes</li>
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <strong>C# Fundamentals</strong> - Software University (SoftUni), Sofia, Bulgaria
+                    <ul>
+                     <br>
+                        <li>- Analysis of complex problems and reduction to computer-executable steps</li>
+                        <li>- Handling the standard functionality in the C# language</li>
+                        <li>- Basic skills for working with HTML and CSS</li>
+                        <li>- Understanding the relationship between di􏰀erent IT concepts</li>
+                        <li>- Working with linear data structures Fundamentals of web development</li>
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <strong>C# Basics</strong> - Software University (SoftUni), Sofia, Bulgaria
+                    <ul>
+                     <br>
+                        <li>- Working with the console (data input and output)</li>
+                        <li>- Work with more complex logical checks</li>
+                        <li>- Performing simple calculations</li>
+                        <li>- Working with cycles (for and while)</li>
+                        <li>- Working with logical checks (if-else)</li>
+                        <li>- Working with linear data structures Fundamentals of web development</li>
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Electrician</strong> - High school “PG Bobov dol”, Bobov dol, Bulgaria
+                    <ul>
+                     <br>
+                        <li>- Understanding of electrical principles and terminology.</li>
+                        <li>- Familiarity with AC/DC circuits.</li>
+                        <li>- Knowledge of electrical safety and regulations.</li>
+                        <li>- Installation of electrical outlets, switches, and lighting fixtures.</li>
+                        <br>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2>📜 Certifications</h2>
+            <br>
+            <div class="certificates">
+                <div class="certificate">
+                    <h3>Linux System Administration</h3>
+                    <a href="https://softuni.bg/certificates/details/107886/ce645825" target="_blank">
+                        <img src="certifications/softuni-logo.png" alt="SoftUni" class="issuer-logo">
+                        <img src="certifications/linux-certificate.jpg" alt="Linux System Administration Certificate" class="certificate-image">
+                    </a>
+                </div>
+
+                <div class="certificate">
+                    <h3>Entity Framework Core - Code to DB & Reverse</h3>
+                    <a href="https://softuni.bg/certificates/details/104384/868e0f20" target="_blank">
+                        <img src="certifications/softuni-logo.png" alt="SoftUni" class="issuer-logo">
+                        <img src="certifications/entity-framework-core.jpg" alt="Entity Framework Core Certificate" class="certificate-image">
+                    </a>
+                </div>
+                <div class="certificate">
+                    <h3>DevOps - Containerization, CI/CD & Monitoring</h3>
+                    <a href="https://softuni.bg/certificates/details/147792/f2880ada" target="_blank">
+                        <img src="certifications/softuni-logo.png" alt="SoftUni" class="issuer-logo">
+                        <img src="certifications/devops-containerization-cicd-monitoring.jpg" alt="DevOps - Containerization, CI/CD & Monitoring Certificate" class="certificate-image">
+                    </a>
+                </div>
+                <div class="certificate">
+                    <h3>DevOps - Infrastructure & Configuration Management</h3>
+                    <a href="https://softuni.bg/certificates/details/153785/ac15277c" target="_blank">
+                        <img src="certifications/softuni-logo.png" alt="SoftUni" class="issuer-logo">
+                        <img src="certifications/devops-infrastructure-configuration-management.jpg" alt="DevOps - Infrastructure & Configuration Management Certificate" class="certificate-image">
+                    </a>
+                </div>
+                <div class="certificate">
+                    <h3>MS SQL</h3>
+                    <a href="https://softuni.bg/certificates/details/103961/7e876e7d" target="_blank">
+                        <img src="certifications/softuni-logo.png" alt="SoftUni" class="issuer-logo">
+                        <img src="certifications/ms-sql.jpg" alt="MS SQL Certificate" class="certificate-image">
+                    </a>
+                </div>
+                <div class="certificate">
+                    <h3>C# Advanced</h3>
+                    <a href="https://softuni.bg/certificates/details/83435/0751958c" target="_blank">
+                        <img src="certifications/softuni-logo.png" alt="SoftUni" class="issuer-logo">
+                        <img src="certifications/csharp-advanced.jpg" alt="C# Advanced Certificate" class="certificate-image">
+                    </a>
+                </div>
+                <div class="certificate">
+                    <h3>C# Basics</h3>
+                    <a href="https://softuni.bg/certificates/details/63463/9a1811a2" target="_blank">
+                        <img src="certifications/softuni-logo.png" alt="SoftUni" class="issuer-logo">
+                        <img src="certifications/csharp-basics.jpg" alt="C# Basics Certificate" class="certificate-image">
+                    </a>
+                </div>
+                <div class="certificate">
+                    <h3>Kubernetes</h3>
+                    <h3></h3>
+                    <a href="https://softuni.bg/certificates/details/195938/74605df8" target="_blank">
+                        <img src="certifications/softuni-logo.png" alt="SoftUni" class="issuer-logo">
+                        <img src="certifications/kubernetes.jpg" alt="Kubernetes Certificate" class="certificate-image">
+                    </a>
+                </div>
+                <div class="certificate">
+                    <h3>C# OOP</h3>
+                    <a href="https://softuni.bg/certificates/details/87582/e6e0c3fb" target="_blank">
+                        <img src="certifications/softuni-logo.png" alt="SoftUni" class="issuer-logo">
+                        <img src="certifications/csharp-oop-certificate.jpg" alt="C# OOP Certificate" class="certificate-image">
+                    </a>
+                </div>
+                <div class="certificate">
+                    <h3>Linux Foundation Certified System Administrator</h3>
+                    <a href="https://legacy.kodekloud.com/certificate-verification/2D14674ADDDC-2DF3D97411CB-2D146117CD34/" target="_blank">
+                        <img src="certifications/kodekloud.png" alt="Kodekloud" class="issuer-logo">
+                        <img src="certifications/LFCS.jpg" alt="Linux Foundation Certified System Administrator Certificate" class="certificate-image">
+                    </a>
+                </div>
+                <div class="certificate">
+                    <h3>Amazon Simple Storage Service (Amazon S3)</h3>
+                    <a href="https://legacy.kodekloud.com/certificate-verification/2D14674ADDDC-2EDEEA8978FC-2D146117CD34/" target="_blank">
+                        <img src="certifications/kodekloud.png" alt="Kodekloud" class="issuer-logo">
+                        <img src="certifications/s3.jpg" alt="Amazon Simple Storage Service (Amazon S3)" class="certificate-image">
+                    </a>
+                </div>
+        </section>
+        <section class="section">
+            <h2>🗣️ Languages</h2>
+            <ul>
+                <li><strong>Bulgarian:</strong> Native or Bilingual Proficiency</li>
+                <li><strong>English:</strong> Full Professional Proficiency</li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2>🧩 Skills</h2>
+            <ul>
+                <li>
+                    <strong>Scripting:</strong> Proficient in <strong>Bash</strong> and <strong>Python</strong>, adept at writing scripts for automation and system management.
+                    <br>
+                    <strong>Automation:</strong> Experienced with <strong>Jenkins</strong> and <strong>GitHub Actions</strong>, capable of setting up and managing CI/CD pipelines.
+                    <br>
+                    <strong>Databases:</strong> Skilled in managing and querying <strong>MariaDB</strong> and <strong>MS SQL</strong>, with a solid understanding of database design and optimization.
+                    <br>
+                    <strong>Web Servers:</strong> Knowledgeable in configuring and maintaining <strong>Apache</strong> and <strong>Nginx</strong>, ensuring high performance and security for web applications.
+                    <br>
+                    <strong>Infrastructure as Code (IaC):</strong> Familiar with <strong>Vagrant</strong> and <strong>Terraform</strong> for provisioning and managing infrastructure in a reproducible and scalable manner.
+                    <br>
+                    <strong>Containerization:</strong> Experienced in using <strong>Docker</strong> and <strong>Kubernetes</strong> for container orchestration, deployment, and scaling of applications.
+                    <br>
+                    <strong>System Administration:</strong> Comprehensive skills in <strong>system administration</strong>, including server management, monitoring, and troubleshooting to ensure optimal system performance.
+                </li>
+
+            </ul>
+        </section>
+        </div>
+        <footer>
+            <li>2024 Hristo Hristov. All rights reserved.</li>
+        </footer>
+        <div id="anonymous"></div>
+        <script>
+         const canvas = document.createElement('canvas');
+         document.getElementById('anonymous').appendChild(canvas);
+         const ctx = canvas.getContext('2d');
+     
+         let width, height;
+         let particles = [];
+         let time = 0;
+         const numParticles = 2000; // Increased density
+         const colors = ['#00FFFF']; // Cyan, Magenta, White
+     
+         function resizeCanvas() {
+             width = canvas.width = window.innerWidth;
+             height = canvas.height = window.innerHeight;
+         }
+     
+         function createParticles() {
+             particles = [];
+             for (let i = 0; i < numParticles; i++) {
+                 particles.push({
+                     x: Math.random() * width,
+                     y: Math.random() * height,
+                     size: Math.random() * 1 + 0.4, // Smaller particles
+                     speedX: (Math.random() - 0.5) * 3,
+                     speedY: (Math.random() - 0.5) * 3,
+                     color: colors[Math.floor(Math.random() * colors.length)] // Random color
+                 });
+             }
+         }
+     
+         function animateParticles() {
+             ctx.clearRect(0, 0, width, height);
+     
+             time += 0.003; // Controls the speed of the wave effect
+     
+             for (let i = 0; i < particles.length; i++) {
+                 let p = particles[i];
+                 p.x += p.speedX;
+                 p.y += p.speedY;
+     
+                 // Apply wave effect to the Y position
+                 p.y += Math.sin(time + p.x / 6000) * 2;
+     
+                 // Bounce particles off edges
+                 if (p.x > width || p.x < 0) p.speedX *= -1;
+                 if (p.y > height || p.y < 0) p.speedY *= -1;
+     
+                 ctx.beginPath();
+                 ctx.arc(p.x, p.y, p.size, 0, Math.PI);
+                 ctx.fillStyle = p.color; // Use the particle's color
+                 ctx.fill();
+                 ctx.closePath();
+             }
+     
+             requestAnimationFrame(animateParticles);
+         }
+     
+         window.addEventListener('resize', resizeCanvas);
+         resizeCanvas();
+         createParticles();
+         animateParticles();
+     </script>
+     
+     
+</body>
+
+</html>
