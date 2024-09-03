@@ -15,14 +15,16 @@
          overflow: auto; /* Ensure scrolling is enabled */
          }
          header {
-         background: rgba(0, 0, 0, 0.70);
+         background: rgba(0, 0, 0, 0.40);
          color: #fff;
          text-align: center;
          padding: 1em 0;
-         margin: auto;
+         margin: 15px auto;
          position: sticky;
          z-index: 1;
-         box-shadow: 0 0 10px rgba(53, 135, 145, 0.5);
+         box-shadow: 0 0 0px rgba(53, 135, 145, 0.5);
+         border-radius: 50px;
+         width: 70%;
          }
          .profile-container {
          display: flex;
@@ -39,12 +41,12 @@
          object-fit: cover;
          }
          .contact-info {
-         text-align: right; /* Center text under profile picture */
-         font-size: 14px;
-         padding-right: 70px;
+         text-align: center; /* Center text under profile picture */
+         font-size: 18px;
+         padding-right: 20px;
          }
          .contact-info p {
-         margin: 5px 0;
+         margin: 2px 0;
          }
          h1, h2 {
          margin: 0.5em 0;
@@ -62,7 +64,7 @@
          margin: 20px;
          padding: 20px;
          border-radius: 20px;
-         box-shadow: 0 0 10px rgba(53, 135, 145, 0.5);
+         box-shadow: 0 0 80px rgba(53, 135, 145, 0.5);
          z-index: 1;
          }
          .section ul {
@@ -145,12 +147,12 @@
         }
 
         .contact-info {
-            position: absolute;
+            position: relative; /* Ensure the container is the reference for the absolute positioning */
             top: 0;
             right: 0;
             text-align: right;
-            padding: 100px; /* Optional: Adjust padding as needed */
-            font-size: 16px;
+            padding: 2px; /* Optional: Adjust padding as needed */
+            font-size: 18px;
         }
         /* Mobile Responsiveness */
 @media (max-width: 768px) {
@@ -257,12 +259,6 @@
                     <p>DevOps/Unix Engineer</p>
                 </div>
             </div>
-            <!-- Contact Info Section -->
-            <div class="contact-info">
-                <p>Email: <a href="mailto:hkhristov8@gmail.com" style="text-decoration: none; color: inherit;">hkhristov8@gmail.com</a></p>
-                <p>Phone: +359 895 984 922</p>
-                <p>Location: Dupnitsa, Bulgaria</p>
-            </div>
         </div>
         <!-- Logos Section -->
         <div class="logos">
@@ -295,6 +291,10 @@
             <h3>💻 My Background</h3>
             <p>I have experience across cloud environments, programming, and system administration. My passion lies in developing solutions that improve performance, automate workflows, and ensure system stability. I believe in the power of teamwork and
                 continuous learning. I'm always eager to learn from others, and I enjoy sharing my knowledge to help ensure the success of the teams and projects I work on.</p>
+           
+          <!-- Contact Info Section -->
+          <div class="contact-info">
+            <h3><strong>Contacts:</strong></h3>
             <a href="https://www.linkedin.com/in/nysgoth/">
                 <img src="contacts/linkedin.svg" alt="LinkedIn Logo" class="header-logo">
             </a>
@@ -304,6 +304,11 @@
             <a href="https://www.facebook.com/nysgoth">
                 <img src="contacts/facebook.svg" alt="Facebook Logo" class="header-logo">
             </a>
+            <br></br>
+            <p><strong>Email: </strong><a href="mailto:hkhristov8@gmail.com" style="text-decoration: none; color: cyan;">hkhristov8@gmail.com</a></p>
+            <p><strong>Phone: </strong>+359 895 984 922</p>
+            <p><strong>Location: </strong>Dupnitsa, Bulgaria</p>
+        </div>
         </section>
         <section class="section">
             <h2>🏢 Experience</h2>
@@ -314,7 +319,7 @@
                 <strong>DevOps Engineer</strong> 
             </h3>
                 <li>Location: Sofia, Bulgaria</li>
-                <li>SAP Labs Bulgaria (01/2023 - Now)</li>
+                <li>SAP Labs Bulgaria (JAN/2023 - Now)</li>
                 <li>
                     Responsibilities:
 
@@ -335,7 +340,7 @@
                 <li></li>
               </h3>
                 <li>Location: Business Park, Sofia, Bulgaria</li>
-                <li>DXC Technology (12/2021 - 01/2023) </li>
+                <li>DXC Technology (DEC/2021 - JAN/2023) </li>
                 <li>
                     Responsibilities:
 
@@ -353,7 +358,7 @@
               </h3>
                 <br>
                 <li>Location: Veliko Tarnovo, Bulgaria</li>
-                <li>Cisco NetAcad (01/2018 - 06/2018)</li>
+                <li>Cisco NetAcad (JAN/2018 - JUN/2018)</li>
                 <li>
                     Responsibilities:
 
