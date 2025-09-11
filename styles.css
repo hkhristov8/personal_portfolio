@@ -400,11 +400,16 @@ header.header-hidden {
     padding: 20px;
     position: relative;
     z-index: 1;
-    /* Add top margin to account for fixed header */
-    margin-top: 180px;
     /* Ensure container doesn't overflow */
     box-sizing: border-box;
     overflow-x: hidden;
+}
+
+/* Desktop container margin */
+@media (min-width: 769px) {
+    .container {
+        margin-top: 180px;
+    }
 }
 
 /* Mobile container adjustments - consolidated - Updated */
