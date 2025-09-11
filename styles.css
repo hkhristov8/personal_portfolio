@@ -123,14 +123,14 @@ header.header-hidden {
     height: 80px;
     object-fit: cover;
     border: 3px solid var(--primary-color);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
     transition: var(--transition);
     flex-shrink: 0;
 }
 
 .profile-container img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
 }
 
 .profile-text {
@@ -227,7 +227,7 @@ header.header-hidden {
 
 .tech-logos-container:hover {
     border-color: rgba(0, 255, 255, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
 }
 
 .tech-logos-container h3 {
@@ -266,7 +266,7 @@ header.header-hidden {
 .tech-logo-item:hover {
     background: rgba(0, 255, 255, 0.1);
     border-color: rgba(0, 255, 255, 0.3);
-    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 3px 8px rgba(0, 255, 255, 0.15);
     transform: translateY(-3px);
 }
 
@@ -383,7 +383,7 @@ header.header-hidden {
     background: rgba(0, 255, 255, 0.2);
     border-color: rgba(0, 255, 255, 0.4);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 2px 6px rgba(0, 255, 255, 0.15);
 }
 
 .social-link img {
@@ -404,6 +404,7 @@ header.header-hidden {
     box-sizing: border-box;
     overflow-x: hidden;
     /* NO BASE MARGIN-TOP - Only applied in media queries */
+    margin-top: 0 !important;
 }
 
 /* Desktop container margin */
@@ -653,7 +654,7 @@ header.header-hidden {
 
 .section:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 40px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.15);
 }
 
 .section h2 {
@@ -800,7 +801,7 @@ header.header-hidden {
 .experience-item:hover {
     transform: translateY(-5px);
     border-color: rgba(0, 255, 255, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
 }
 
 .experience-header {
@@ -874,7 +875,7 @@ header.header-hidden {
 .education-item:hover {
     transform: translateY(-5px);
     border-color: rgba(0, 255, 255, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
 }
 
 .education-item h3 {
@@ -930,7 +931,7 @@ header.header-hidden {
 .language-item:hover {
     transform: translateY(-5px);
     border-color: rgba(0, 255, 255, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
 }
 
 .language-item h3 {
@@ -961,7 +962,7 @@ header.header-hidden {
 .skill-category:hover {
     transform: translateY(-5px);
     border-color: rgba(0, 255, 255, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
 }
 
 .skill-category h3 {
