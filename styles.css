@@ -558,6 +558,32 @@ header.header-hidden {
     .tech-label {
         font-size: 0.6rem;
     }
+
+    /* Education section for small phones */
+    .education-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+
+    .education-item {
+        padding: 1rem;
+    }
+
+    .education-item h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .institution {
+        font-size: 0.85rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .education-item ul li {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+        padding-left: 0.8rem;
+    }
 }
 
 @media (max-width: 375px) {
@@ -829,6 +855,9 @@ header.header-hidden {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .education-item {
@@ -837,6 +866,12 @@ header.header-hidden {
     padding: 1.5rem;
     border: 1px solid rgba(0, 255, 255, 0.1);
     transition: var(--transition);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
 }
 
 .education-item:hover {
@@ -849,6 +884,11 @@ header.header-hidden {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
     font-size: 1.3rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    line-height: 1.3;
 }
 
 .institution {
@@ -856,6 +896,38 @@ header.header-hidden {
     font-style: italic;
     margin-bottom: 1rem;
     font-size: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    line-height: 1.4;
+}
+
+.education-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.education-item ul li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    position: relative;
+    color: var(--text-secondary);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    line-height: 1.5;
+}
+
+.education-item ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 /* Languages Grid */
@@ -1123,6 +1195,33 @@ footer p {
         margin-bottom: 1rem;
     }
 
+    /* Education section mobile improvements */
+    .education-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .education-item {
+        padding: 1.2rem;
+        margin: 0;
+    }
+
+    .education-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .institution {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .education-item ul li {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+        padding-left: 1rem;
+    }
+
     /* Certificates and Images */
     .certificates {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1362,6 +1461,32 @@ footer p {
         max-width: 100%;
         box-sizing: border-box;
         overflow: visible;
+    }
+
+    /* Education section for very small phones */
+    .education-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .education-item {
+        padding: 0.8rem;
+    }
+
+    .education-item h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .institution {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .education-item ul li {
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
+        padding-left: 0.6rem;
     }
 
     .section {
