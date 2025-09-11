@@ -407,10 +407,10 @@ header.header-hidden {
     overflow-x: hidden;
 }
 
-/* Mobile container adjustments - consolidated */
+/* Mobile container adjustments - consolidated - Updated */
 @media (max-width: 768px) {
     .container {
-        margin-top: 200px; /* Increased for mobile header */
+        margin-top: 200px !important; /* Increased for mobile header */
         width: 95%;
         padding: 15px;
         margin-left: auto;
@@ -422,7 +422,7 @@ header.header-hidden {
 
 @media (max-width: 480px) {
     .container {
-        margin-top: 220px; /* Further increased for smaller phones */
+        margin-top: 220px !important; /* Further increased for smaller phones */
         width: 95%;
         padding: 10px;
     }
@@ -430,7 +430,7 @@ header.header-hidden {
 
 @media (max-width: 375px) {
     .container {
-        margin-top: 240px; /* Maximum for very small phones */
+        margin-top: 240px !important; /* Maximum for very small phones */
         width: 95%;
         padding: 8px;
     }
@@ -566,7 +566,7 @@ header.header-hidden {
     }
 
     .education-item {
-        padding: 1rem;
+        padding: 1.2rem;
     }
 
     .education-item h3 {
@@ -855,23 +855,14 @@ header.header-hidden {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
 }
 
 .education-item {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 15px;
-    padding: 1.5rem;
+    padding: 2rem;
     border: 1px solid rgba(0, 255, 255, 0.1);
     transition: var(--transition);
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow: visible;
-    display: flex;
-    flex-direction: column;
 }
 
 .education-item:hover {
@@ -882,13 +873,8 @@ header.header-hidden {
 
 .education-item h3 {
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-size: 1.3rem;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    max-width: 100%;
-    line-height: 1.3;
 }
 
 .institution {
@@ -896,18 +882,12 @@ header.header-hidden {
     font-style: italic;
     margin-bottom: 1rem;
     font-size: 1rem;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    max-width: 100%;
-    line-height: 1.4;
 }
 
 .education-item ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    flex-grow: 1;
 }
 
 .education-item ul li {
@@ -915,11 +895,6 @@ header.header-hidden {
     padding-left: 1.2rem;
     position: relative;
     color: var(--text-secondary);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    max-width: 100%;
-    line-height: 1.5;
 }
 
 .education-item ul li::before {
@@ -1202,8 +1177,7 @@ footer p {
     }
 
     .education-item {
-        padding: 1.2rem;
-        margin: 0;
+        padding: 1.5rem;
     }
 
     .education-item h3 {
@@ -1470,7 +1444,7 @@ footer p {
     }
 
     .education-item {
-        padding: 0.8rem;
+        padding: 1rem;
     }
 
     .education-item h3 {
