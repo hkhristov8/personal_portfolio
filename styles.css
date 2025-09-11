@@ -591,6 +591,17 @@ header.header-hidden {
         margin-bottom: 0.5rem;
         padding-left: 0.8rem;
     }
+
+    /* Fix Languages and Skills grid width overflow on small phones */
+    .languages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 0.8rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 0.8rem;
+    }
 }
 
 @media (max-width: 375px) {
@@ -1203,6 +1214,17 @@ footer p {
         padding-left: 1rem;
     }
 
+    /* Fix Languages and Skills grid width overflow on tablets */
+    .languages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.2rem;
+    }
+
     /* Certificates and Images */
     .certificates {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1468,6 +1490,17 @@ footer p {
         font-size: 0.8rem;
         margin-bottom: 0.4rem;
         padding-left: 0.6rem;
+    }
+
+    /* Fix Languages and Skills grid width overflow on mobile */
+    .languages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
     }
 
     .section {
