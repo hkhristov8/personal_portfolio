@@ -445,6 +445,8 @@ header.header-hidden {
         left: 0;
         right: 0;
         z-index: 100;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .header-content {
@@ -453,6 +455,7 @@ header.header-hidden {
         text-align: center;
         gap: 1rem;
         max-width: 100%;
+        width: 100%;
     }
     
     .profile-container {
@@ -460,29 +463,55 @@ header.header-hidden {
         align-items: center;
         text-align: center;
         gap: 0.8rem;
+        width: 100%;
     }
     
     .profile-container img {
         width: 100px;
         height: 100px;
         object-fit: cover;
+        border-radius: 50%;
     }
     
     .profile-text h1 {
         font-size: 1.6rem;
         line-height: 1.2;
+        word-wrap: break-word;
     }
     
     .profile-text p {
         font-size: 0.9rem;
         line-height: 1.2;
+        word-wrap: break-word;
+    }
+    
+    /* Ensure proper spacing for mobile */
+    .container {
+        margin-top: 200px !important;
+        padding-top: 20px;
     }
 }
 
 /* Landscape phone orientation */
 @media (max-width: 768px) and (orientation: landscape) {
     .container {
-        margin-top: 120px; /* Reduced for landscape */
+        margin-top: 120px !important; /* Reduced for landscape */
+        padding-top: 10px;
+    }
+    
+    header {
+        padding: 0.5rem;
+    }
+    
+    .header-content {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .profile-container {
+        flex-direction: row;
+        gap: 1rem;
     }
     
     .profile-container img {
@@ -496,6 +525,64 @@ header.header-hidden {
     
     .profile-text p {
         font-size: 0.9rem;
+    }
+}
+
+/* Additional mobile improvements for very small screens */
+@media (max-width: 480px) {
+    .container {
+        margin-top: 220px !important;
+        padding: 10px;
+    }
+    
+    .section {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .tech-logos-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.6rem;
+    }
+    
+    .tech-logo-item {
+        padding: 0.5rem;
+        min-height: 75px;
+    }
+    
+    .tech-logo {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .tech-label {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        margin-top: 240px !important;
+        padding: 8px;
+    }
+    
+    .tech-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .tech-logo-item {
+        padding: 0.4rem;
+        min-height: 65px;
+    }
+    
+    .tech-logo {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .tech-label {
+        font-size: 0.55rem;
     }
 }
 
