@@ -729,6 +729,7 @@ header.header-hidden {
     border-bottom: 3px solid var(--primary-color);
     padding-bottom: 0.5rem;
     font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .section h2::after {
