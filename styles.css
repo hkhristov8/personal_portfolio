@@ -407,6 +407,25 @@ header.header-hidden {
     overflow-x: hidden;
 }
 
+/* Mobile container adjustments */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 200px; /* Increased for mobile header */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-top: 220px; /* Further increased for smaller phones */
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        margin-top: 240px; /* Maximum for very small phones */
+    }
+}
+
 .section {
     background: linear-gradient(135deg, var(--bg-secondary), rgba(0, 0, 0, 0.6));
     margin: 2rem 0;
@@ -451,6 +470,10 @@ header.header-hidden {
     color: var(--primary-color);
     text-align: center;
     position: relative;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
 }
 
 .section h2::after {
@@ -472,6 +495,10 @@ header.header-hidden {
     display: flex;
     align-items: center;
     gap: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
 }
 
 .section h3 img {
@@ -484,6 +511,10 @@ header.header-hidden {
     margin-bottom: 1rem;
     color: var(--text-secondary);
     font-size: 1.1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
 }
 
 .section ul {
@@ -496,6 +527,10 @@ header.header-hidden {
     padding-left: 1.5rem;
     position: relative;
     color: var(--text-secondary);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
 }
 
 .section ul li::before {
@@ -596,6 +631,10 @@ header.header-hidden {
     margin: 0 0 0.5rem 0;
     color: var(--primary-color);
     font-size: 1.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
 }
 
 .company-name {
@@ -619,6 +658,10 @@ header.header-hidden {
     color: var(--accent-color);
     margin-bottom: 1rem;
     font-size: 1.1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
 }
 
 /* Education Grid */
@@ -865,6 +908,10 @@ footer p {
     .section h3 {
         font-size: 1.1rem;
         margin: 1.2rem 0 0.8rem 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
     }
 
     .section h3 img {
@@ -875,6 +922,10 @@ footer p {
         font-size: 1rem;
         line-height: 1.6;
         margin-bottom: 0.8rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
     }
 
     /* Technology Stack Mobile */
@@ -994,10 +1045,18 @@ footer p {
 
     .section h2 {
         font-size: 1.4rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
     }
 
     .section h3 {
         font-size: 1.1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
     }
 
     .section h3 img {
@@ -1165,16 +1224,28 @@ footer p {
     .section h2 {
         font-size: 1.3rem;
         margin-bottom: 1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
     }
 
     .section h3 {
         font-size: 0.95rem;
         margin: 0.8rem 0 0.6rem 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
     }
 
     .section p {
         font-size: 0.95rem;
         line-height: 1.5;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
     }
 
     /* Ensure images are visible on very small screens */
