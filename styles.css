@@ -436,7 +436,7 @@ header.header-hidden {
     }
 }
 
-/* Mobile header improvements */
+/* Mobile header improvements - Updated */
 @media (max-width: 768px) {
     header {
         padding: 1rem 0.5rem;
