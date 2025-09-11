@@ -719,7 +719,7 @@ header.header-hidden {
 .section h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    background: linear-gradient(90deg, #00ffff 0%, #00ffff 20%, #ff00ff 80%, #ff00ff 100%);
+    background: linear-gradient(90deg, #00ffff 0%, #00ffff 15%, #ff00ff 85%, #ff00ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -730,7 +730,7 @@ header.header-hidden {
     hyphens: auto;
     max-width: 100%;
     border-bottom: 3px solid transparent;
-    border-image: linear-gradient(90deg, #00ffff 0%, #00ffff 20%, #ff00ff 80%, #ff00ff 100%) 1;
+    border-image: linear-gradient(90deg, #00ffff 0%, #00ffff 15%, #ff00ff 85%, #ff00ff 100%) 1;
     padding-bottom: 0.5rem;
     font-weight: 700;
 }
