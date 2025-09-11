@@ -392,7 +392,7 @@ header.header-hidden {
     filter: brightness(0) invert(1);
 }
 
-/* Container and Sections */
+/* Container and Sections - MOBILE FIXED */
 .container {
     width: 80%;
     max-width: 1200px;
@@ -403,6 +403,7 @@ header.header-hidden {
     /* Ensure container doesn't overflow */
     box-sizing: border-box;
     overflow-x: hidden;
+    /* NO BASE MARGIN-TOP - Only applied in media queries */
 }
 
 /* Desktop container margin */
