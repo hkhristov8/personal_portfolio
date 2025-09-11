@@ -412,7 +412,7 @@ header.header-hidden {
     }
 }
 
-/* Mobile container adjustments - consolidated - Updated */
+/* Mobile container adjustments - consolidated - Fixed */
 @media (max-width: 768px) {
     .container {
         margin-top: 200px !important; /* Increased for mobile header */
