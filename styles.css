@@ -13,7 +13,9 @@
     --transition: all 0.3s ease;
 }
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,6 +27,14 @@ body {
     background-color: var(--bg-primary);
     overflow-x: hidden;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 /* Loading Overlay */
@@ -209,6 +219,10 @@ header.header-hidden {
     border-radius: 15px;
     border: 1px solid rgba(0, 255, 255, 0.1);
     transition: var(--transition);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
 }
 
 .tech-logos-container:hover {
@@ -382,12 +396,15 @@ header.header-hidden {
 .container {
     width: 80%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 20px;
     position: relative;
     z-index: 1;
     /* Add top margin to account for fixed header */
     margin-top: 180px;
+    /* Ensure container doesn't overflow */
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .section {
@@ -399,9 +416,13 @@ header.header-hidden {
     border: 1px solid rgba(0, 255, 255, 0.1);
     transition: var(--transition);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     /* Ensure sections don't affect header positioning */
     transform: none !important;
+    /* Ensure proper box sizing */
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
 }
 
 .section::before {
@@ -803,12 +824,19 @@ footer p {
     .container {
         width: 95%;
         padding: 15px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     .section {
         margin: 1.2rem 0;
         padding: 1.2rem;
         border-radius: 15px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: visible;
     }
 
     .profile-container img {
@@ -881,6 +909,10 @@ footer p {
     .tech-logos-container {
         padding: 1.2rem;
         margin: 1.2rem 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: visible;
     }
 
     .tech-logos-container h3 {
@@ -954,6 +986,10 @@ footer p {
     .section {
         padding: 1rem;
         margin: 1rem 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: visible;
     }
 
     .section h2 {
@@ -1018,6 +1054,10 @@ footer p {
     .tech-logos-container {
         padding: 0.8rem;
         margin: 0.8rem 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: visible;
     }
 
     .tech-logos-container h3 {
@@ -1107,11 +1147,19 @@ footer p {
     .tech-logos-container {
         padding: 0.6rem;
         margin: 0.6rem 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: visible;
     }
 
     .section {
         padding: 0.8rem;
         margin: 0.6rem 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: visible;
     }
 
     .section h2 {
