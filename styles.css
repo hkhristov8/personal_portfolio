@@ -410,7 +410,8 @@ header.header-hidden {
 /* Desktop container margin */
 @media (min-width: 769px) {
     .container {
-        margin-top: 250px;
+        margin-top: 350px !important;
+        padding-top: 2rem;
     }
 }
 
