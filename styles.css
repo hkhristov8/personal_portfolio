@@ -806,22 +806,22 @@ footer p {
     }
 
     .section {
-        margin: 1.5rem 0;
-        padding: 1.5rem;
+        margin: 1.2rem 0;
+        padding: 1.2rem;
         border-radius: 15px;
     }
 
     .profile-container img {
-        width: 140px;
-        height: 140px;
+        width: 120px;
+        height: 120px;
     }
 
     .profile-text h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .profile-text p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .header-logo {
@@ -830,24 +830,104 @@ footer p {
     }
 
     .section h2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
     }
 
     .section h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        margin: 1.2rem 0 0.8rem 0;
     }
 
     .section h3 img {
-        width: 50px;
+        width: 45px;
     }
 
+    .section p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Technology Stack Mobile */
+    .tech-logos-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.8rem;
+        max-width: 100%;
+    }
+
+    .tech-logo-item {
+        padding: 0.6rem;
+        min-height: 85px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tech-logo {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 0.3rem;
+    }
+
+    .tech-label {
+        font-size: 0.65rem;
+        text-align: center;
+        line-height: 1.1;
+        word-wrap: break-word;
+    }
+
+    .tech-logos-container {
+        padding: 1.2rem;
+        margin: 1.2rem 0;
+    }
+
+    .tech-logos-container h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Certificates and Images */
     .certificates {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.2rem;
     }
 
+    .certificate {
+        padding: 1rem;
+    }
+
+    .certificate-image {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: contain;
+    }
+
+    .issuer-logo {
+        width: 60px;
+        height: auto;
+    }
+
+    /* Company logos */
+    .company-logo {
+        width: 60px;
+        height: 45px;
+    }
+
+    /* Contact info */
     .contact-info {
-        padding: 1.5rem;
+        padding: 1.2rem;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-links img {
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -907,32 +987,178 @@ footer p {
     }
 
     .tech-logos-grid {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.6rem;
+        max-width: 100%;
     }
 
     .tech-logo-item {
-        padding: 0.8rem;
-        min-height: 100px;
+        padding: 0.5rem;
+        min-height: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .tech-logo {
-        width: 40px;
-        height: 40px;
+        width: 28px;
+        height: 28px;
+        margin-bottom: 0.2rem;
     }
 
     .tech-label {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
+        text-align: center;
+        line-height: 1.0;
+        word-wrap: break-word;
+        max-width: 100%;
     }
 
     .tech-logos-container {
-        padding: 1.5rem;
-        margin: 1.5rem 0;
+        padding: 0.8rem;
+        margin: 0.8rem 0;
     }
 
     .tech-logos-container h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    /* Better image sizing for small phones */
+    .certificates {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .certificate-image {
+        max-height: 150px;
+    }
+
+    .issuer-logo {
+        width: 50px;
+    }
+
+    .company-logo {
+        width: 50px;
+        height: 35px;
+    }
+
+    .section h2 {
+        font-size: 1.4rem;
+    }
+
+    .section h3 {
+        font-size: 1rem;
+    }
+
+    /* Additional mobile improvements */
+    .tech-logo-item:hover {
+        transform: translateY(-2px);
+    }
+
+    .tech-logo-item:active {
+        transform: scale(0.95);
+    }
+
+    /* Better spacing for mobile sections */
+    .section {
+        margin: 0.8rem 0;
+        padding: 1rem;
+    }
+
+    .about-content {
+        padding: 0;
+    }
+
+    /* Improve text readability on mobile */
+    .section p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .section h3 {
+        font-size: 1.1rem;
+        margin: 1rem 0 0.8rem 0;
+    }
+}
+
+/* Extra small phones (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .tech-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .tech-logo-item {
+        padding: 0.4rem;
+        min-height: 65px;
+    }
+
+    .tech-logo {
+        width: 24px;
+        height: 24px;
+    }
+
+    .tech-label {
+        font-size: 0.55rem;
+    }
+
+    .tech-logos-container {
+        padding: 0.6rem;
+        margin: 0.6rem 0;
+    }
+
+    .section {
+        padding: 0.8rem;
+        margin: 0.6rem 0;
+    }
+
+    .section h2 {
+        font-size: 1.3rem;
         margin-bottom: 1rem;
+    }
+
+    .section h3 {
+        font-size: 0.95rem;
+        margin: 0.8rem 0 0.6rem 0;
+    }
+
+    .section p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    /* Ensure images are visible on very small screens */
+    .certificates {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .certificate-image {
+        max-height: 120px;
+    }
+
+    .issuer-logo {
+        width: 40px;
+    }
+
+    .company-logo {
+        width: 45px;
+        height: 30px;
+    }
+
+    .profile-container img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .profile-text p {
+        font-size: 0.9rem;
     }
 }
 
