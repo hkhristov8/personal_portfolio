@@ -1,12 +1,17 @@
 :root {
-    --primary-color: #00ffff;
-    --secondary-color: #ff00ff;
+    --primary-color: #ff00ff;
+    --secondary-color: #00ffff;
     --accent-color: #ffff00;
-    --bg-primary: rgba(0, 0, 0, 0.95);
-    --bg-secondary: rgba(0, 0, 0, 0.8);
-    --bg-card: rgba(27, 27, 27, 0.95);
-    --text-primary: #ffffff;
-    --text-secondary: #cccccc;
+    --bg-primary: #f8f9fa;
+    --bg-secondary: #e9ecef;
+    --bg-card: #ffffff;
+    --text-primary: #2c3e50;
+    --text-secondary: #495057;
+    --border-color: #dee2e6;
+    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+    --accent-light: #007bff;
+    --accent-light-hover: #0056b3;
     --border-radius: 20px;
     --shadow-primary: 0 4px 15px rgba(53, 135, 145, 0.15);
     --shadow-secondary: 0 0 20px rgba(0, 255, 255, 0.3);
@@ -477,6 +482,11 @@ header.header-hidden {
         box-sizing: border-box;
         overflow-x: hidden;
     }
+    
+    /* Hide navigation on mobile */
+    .header-nav {
+        display: none !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -716,6 +726,9 @@ header.header-hidden {
     overflow-wrap: break-word;
     hyphens: auto;
     max-width: 100%;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    font-weight: 700;
 }
 
 .section h2::after {
@@ -1687,19 +1700,7 @@ html {
 }
 
 /* Theme-specific overrides to ensure proper switching */
-body[data-theme="light"] {
-    /* Enhanced light theme colors for better readability */
-    --bg-primary: #f8f9fa;
-    --bg-secondary: #e9ecef;
-    --bg-card: #ffffff;
-    --text-primary: #2c3e50;
-    --text-secondary: #495057;
-    --border-color: #dee2e6;
-    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.08);
-    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
-    --accent-light: #007bff;
-    --accent-light-hover: #0056b3;
-}
+/* Light theme is now default - no overrides needed */
 
 /* Enhanced light theme specific styles */
 body[data-theme="light"] header {
@@ -1825,12 +1826,7 @@ body[data-theme="light"] .theme-toggle:hover {
     box-shadow: var(--shadow-medium);
 }
 
-body[data-theme="light"] h2 {
-    color: #ff00ff;
-    border-bottom: 3px solid #ff00ff;
-    padding-bottom: 0.5rem;
-    font-weight: 700;
-}
+/* h2 styles are now in the main section - no theme override needed */
 
 body[data-theme="light"] h3 {
     color: var(--text-primary);
@@ -1868,6 +1864,8 @@ body[data-theme="light"] .contact-details a:hover {
 }
 
 body[data-theme="dark"] {
+    --primary-color: #00ffff;
+    --secondary-color: #ff00ff;
     --bg-primary: rgba(0, 0, 0, 0.95);
     --bg-secondary: rgba(0, 0, 0, 0.8);
     --bg-card: rgba(27, 27, 27, 0.95);
