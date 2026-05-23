@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hristo Hristov - DevOps/Unix Engineer Portfolio. Experienced in cloud operations, automation, and system administration.">
+    <meta name="description" content="Hristo Hristov - SRE, DevOps, and Unix Engineer. Experienced in cloud operations, automation, and system administration.">
     <meta name="keywords" content="DevOps, Unix Engineer, Cloud Operations, Automation, Kubernetes, Docker, Ansible, Terraform">
     <meta name="author" content="Hristo Hristov">
     
-    <title>Hristo Hristov - DevOps/Unix Engineer Portfolio</title>
+    <title>Hristo Hristov - Site Reliability Engineer</title>
     
     <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="script.js" as="script">
     
     <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     
     <!-- Favicon -->
@@ -33,10 +36,9 @@
         <div class="header-content">
             <!-- Profile Section -->
             <div class="profile-container">
-                <img src="contacts/personal_picture.jpg" alt="Hristo Hristov - DevOps Engineer" loading="eager">
                 <div class="profile-text">
                     <h1>Hristo Hristov</h1>
-                    <p>DevOps/Unix Engineer</p>
+                    <p>Site Reliability Engineer</p>
                 </div>
             </div>
             
@@ -60,83 +62,90 @@
         <!-- About Me Section -->
         <section class="section" id="about">
             <h2>About Me</h2>
+            <div class="about-intro">
+                <div class="about-profile">
+                    <div class="profile-photo">
+                        <img src="contacts/personal_picture.jpg" alt="Hristo Hristov - Site Reliability Engineer" loading="eager">
+                    </div>
+                </div>
+                <div class="about-intro-text">
+                    <h3>Hi, I'm Hristo Hristov</h3>
+                    <p>I'm a Site Reliability Engineer based in Dupnitsa, Bulgaria, currently working at DSK Bank on business-critical systems. My day-to-day focus is on Azure cloud operations, Kubernetes platforms, Azure DevOps pipelines, and observability with Dynatrace. I take ownership of the bank's mobile application infrastructure - one of the most critical services for the business, ensuring high availability, strong performance, and operational stability in a demanding production environment.</p>
+                </div>
+            </div>
             <div class="about-content">
-                <h3>👋 Hi, I'm Hristo Hristov</h3>
-                <p>I'm a DevOps/Unix Engineer based in Dupnitsa, Bulgaria. My work focuses on cloud operations, performance monitoring, and automation. I'm committed to continuously enhancing my skills and contributing to building efficient, reliable systems by taking a thoughtful, collaborative approach.</p>
-                
-                <h3>💻 My Background</h3>
-                <p>I have experience across cloud environments, programming, and system administration. My passion lies in developing solutions that improve performance, automate workflows, and ensure system stability. I believe in the power of teamwork and continuous learning. I'm always eager to learn from others, and I enjoy sharing my knowledge to help ensure the success of the teams and projects I work on.</p>
+                <h3>My Background</h3>
+                <p>My experience spans DevOps, Unix/Linux system administration, cloud engineering, and software development, giving me a practical end-to-end view of how modern platforms are built and operated. I apply SRE principles to improve reliability, automate repetitive workflows, and reduce incident impact across complex Azure and Kubernetes environments. I value clear communication, continuous learning, and close collaboration with development and operations teams to deliver secure, scalable solutions that support both technical excellence and business continuity.</p>
                 
                 <!-- Technology Stack Logos -->
                 <div class="tech-logos-container">
-                    <h3>🛠️ Technology Stack</h3>
+                    <h3>Technology Stack</h3>
                     <div class="tech-logos-grid" aria-label="Technology Stack">
                         <div class="tech-logo-item">
-                            <img src="technologies/docker.svg" alt="Docker" class="tech-logo" title="Docker">
+                            <img src="technologies/docker.svg" alt="Docker" class="tech-logo">
                             <span class="tech-label">Docker</span>
                         </div>
                         <div class="tech-logo-item">
-                            <img src="technologies/kubernetes.svg" alt="Kubernetes" class="tech-logo" title="Kubernetes">
+                            <img src="technologies/kubernetes.svg" alt="Kubernetes" class="tech-logo">
                             <span class="tech-label">Kubernetes</span>
                         </div>
                         <div class="tech-logo-item">
-                            <img src="technologies/ansible.svg" alt="Ansible" class="tech-logo" title="Ansible">
+                            <img src="technologies/ansible.svg" alt="Ansible" class="tech-logo">
                             <span class="tech-label">Ansible</span>
                         </div>
                         <div class="tech-logo-item">
-                            <img src="technologies/terraform.svg" alt="Terraform" class="tech-logo" title="Terraform">
+                            <img src="technologies/terraform.svg" alt="Terraform" class="tech-logo">
                             <span class="tech-label">Terraform</span>
                         </div>
                         <div class="tech-logo-item">
-                            <img src="technologies/aws.svg" alt="AWS" class="tech-logo" title="AWS">
-                            <span class="tech-label">AWS</span>
+                            <img src="technologies/aws.svg" alt="AWS" class="tech-logo tech-logo-wordmark">
                         </div>
                         <div class="tech-logo-item">
-                            <img src="technologies/azure.svg" alt="Azure" class="tech-logo" title="Azure">
+                            <img src="technologies/azure.svg" alt="Azure" class="tech-logo">
                             <span class="tech-label">Azure</span>
                         </div>
                         <div class="tech-logo-item">
-                            <img src="technologies/red-hat.svg" alt="Red Hat" class="tech-logo" title="Red Hat">
+                            <img src="technologies/red-hat.svg" alt="Red Hat" class="tech-logo">
                             <span class="tech-label">Red Hat</span>
                         </div>
                         <div class="tech-logo-item">
-                            <img src="technologies/sap.svg" alt="SAP" class="tech-logo" title="SAP">
-                            <span class="tech-label">SAP</span>
+                            <img src="technologies/sap.svg" alt="SAP" class="tech-logo">
                         </div>
                         <div class="tech-logo-item">
-                            <img src="technologies/bash.svg" alt="Bash" class="tech-logo" title="Bash">
+                            <img src="technologies/bash.svg" alt="Bash" class="tech-logo">
                             <span class="tech-label">Bash</span>
                         </div>
                         <div class="tech-logo-item">
-                            <img src="technologies/python.svg" alt="Python" class="tech-logo" title="Python">
+                            <img src="technologies/python.svg" alt="Python" class="tech-logo">
                             <span class="tech-label">Python</span>
                         </div>
                         <div class="tech-logo-item">
-                            <img src="technologies/csharp.svg" alt="C#" class="tech-logo" title="C#">
-                            <span class="tech-label">C#</span>
+                            <img src="technologies/csharp.svg" alt="C#" class="tech-logo">
                         </div>
                         <div class="tech-logo-item">
-                            <img src="technologies/mysql.svg" alt="MySQL" class="tech-logo" title="MySQL">
-                            <span class="tech-label">MySQL</span>
+                            <img src="technologies/mysql.svg" alt="MySQL" class="tech-logo">
                         </div>
                         <div class="tech-logo-item">
-                            <img src="technologies/jenkins.svg" alt="Jenkins" class="tech-logo" title="Jenkins">
+                            <img src="technologies/postgresql.svg" alt="PostgreSQL" class="tech-logo">
+                            <span class="tech-label">PostgreSQL</span>
+                        </div>
+                        <div class="tech-logo-item">
+                            <img src="technologies/jenkins.svg" alt="Jenkins" class="tech-logo">
                             <span class="tech-label">Jenkins</span>
                         </div>
                         <div class="tech-logo-item">
-                            <img src="contacts/github.svg" alt="GitHub" class="tech-logo" title="GitHub">
+                            <img src="contacts/github.svg" alt="GitHub" class="tech-logo">
                             <span class="tech-label">GitHub</span>
                         </div>
                         <div class="tech-logo-item">
-                            <img src="technologies/dynatrace.svg" alt="Dynatrace" class="tech-logo" title="Dynatrace">
+                            <img src="technologies/dynatrace.svg" alt="Dynatrace" class="tech-logo">
                             <span class="tech-label">Dynatrace</span>
                         </div>
                         <div class="tech-logo-item">
-                            <img src="technologies/servicenow.svg" alt="ServiceNow" class="tech-logo" title="ServiceNow">
-                            <span class="tech-label">ServiceNow</span>
+                            <img src="technologies/servicenow.svg" alt="ServiceNow" class="tech-logo tech-logo-wordmark">
                         </div>
                         <div class="tech-logo-item">
-                            <img src="technologies/jira.svg" alt="Jira" class="tech-logo" title="Jira">
+                            <img src="technologies/jira.svg" alt="Jira" class="tech-logo">
                             <span class="tech-label">Jira</span>
                         </div>
                     </div>
@@ -152,8 +161,8 @@
                         <a href="https://github.com/jbravoturtle" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                             <img src="contacts/github.svg" alt="GitHub" class="header-logo">
                         </a>
-                        <a href="https://www.facebook.com/nysgoth" target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile">
-                            <img src="contacts/facebook.svg" alt="Facebook" class="header-logo">
+                        <a href="https://www.instagram.com/nysgoth/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
+                            <img src="contacts/instagram.svg" alt="Instagram" class="header-logo">
                         </a>
                     </div>
                     
@@ -168,7 +177,7 @@
 
         <!-- Experience Section -->
         <section class="section" id="experience">
-            <h2>🏢 Professional Experience</h2>
+            <h2>Professional Experience</h2>
             <div class="experience-timeline">
                 <div class="experience-item">
                     <div class="experience-header">
@@ -177,17 +186,18 @@
                             <h3>Site Reliability Engineer (SRE)</h3>
                             <p class="company-name">DSK Bank</p>
                             <p class="duration">June 2025 - Present</p>
-                            <p class="location">📍 Sofia, Bulgaria</p>
+                            <p class="location">Sofia, Bulgaria</p>
                         </div>
                     </div>
                     <div class="responsibilities">
-                        <h4>Key Responsibilities:</h4>
+                        <h4>Key Achievements:</h4>
                         <ul>
-                            <li>Managing Azure Infrastructure for DSK Mobile mobile application</li>
-                            <li>Implementing and maintaining SRE practices and principles</li>
-                            <li>Ensuring high availability and reliability of critical banking systems</li>
-                            <li>Monitoring and optimizing cloud infrastructure performance</li>
-                            <li>Collaborating with development teams on infrastructure requirements</li>
+                            <li>First responder for unstable bank systems - rapid incident response and stabilization across critical production services</li>
+                            <li>Diagnose and resolve Kubernetes issues including pod restarts, failed deployments, and platform instability under tight SLAs</li>
+                            <li>Lead infrastructure logging and analysis during incidents using <strong>Grafana</strong>, <strong>Jaeger</strong>, <strong>Dynatrace</strong>, <strong>Azure Log Analytics</strong>, and related observability tooling</li>
+                            <li>Built a custom <strong>KQL</strong> query tool for the team to search logs and pinpoint root causes faster during outages</li>
+                            <li>Built a custom cloud team dashboard for expense tracking and KPI monitoring, giving leadership visibility into cloud spend and operational performance</li>
+                            <li>Own Azure infrastructure for DSK Mobile and support reliability across business-critical banking platforms</li>
                         </ul>
                     </div>
                 </div>
@@ -199,17 +209,17 @@
                             <h3>DevOps Engineer</h3>
                             <p class="company-name">SAP Labs Bulgaria</p>
                             <p class="duration">January 2023 - June 2025</p>
-                            <p class="location">📍 Sofia, Bulgaria</p>
+                            <p class="location">Sofia, Bulgaria</p>
                         </div>
                     </div>
                     <div class="responsibilities">
-                        <h4>Key Responsibilities:</h4>
+                        <h4>Key Achievements:</h4>
                         <ul>
-                            <li>Proven experience in cloud operations, performance and availability monitoring</li>
-                            <li>Strong proficiency in scripting and automation, particularly in the context of availability monitoring</li>
-                            <li>Excellent problem-solving, troubleshooting and integration skills</li>
-                            <li>Knowledge of DevOps practices and experience working in agile environments</li>
-                            <li>Strong communication and teamwork abilities</li>
+                            <li>Automated end-to-end alerting from <strong>Dynatrace</strong> to <strong>ServiceNow</strong>, reducing manual alerting work by <strong>90-95%</strong></li>
+                            <li>Replaced manual alert triage with automated workflows, improving response consistency and freeing the team for higher-value work</li>
+                            <li>Led the department-wide migration from <strong>PagerDuty</strong> to <strong>ServiceNow</strong> for incident and alerting management</li>
+                            <li>Delivered cloud operations, performance monitoring, and availability engineering in an agile DevOps environment</li>
+                            <li>Applied scripting and automation (Bash/Python) to integrate monitoring, ticketing, and operational tooling</li>
                         </ul>
                     </div>
                 </div>
@@ -221,15 +231,17 @@
                             <h3>Unix System Administrator</h3>
                             <p class="company-name">DXC Technology</p>
                             <p class="duration">December 2021 - January 2023</p>
-                            <p class="location">📍 Business Park, Sofia, Bulgaria</p>
+                            <p class="location">Business Park, Sofia, Bulgaria</p>
                         </div>
                     </div>
                     <div class="responsibilities">
-                        <h4>Key Responsibilities:</h4>
+                        <h4>Key Achievements:</h4>
                         <ul>
-                            <li>Installs, configures, and maintains Linux operating systems</li>
-                            <li>Analyzes and resolves problems associated with the operating system's servers, hardware, applications, and software</li>
-                            <li>Monitors systems performance and ensures compliance with security standards</li>
+                            <li>Supported incident and change operations for mission-critical environments serving government, airline, healthcare, and other high-impact clients</li>
+                            <li>Installed, configured, and maintained Unix/Linux systems across <strong>HP-UX</strong>, <strong>Red Hat</strong>, and <strong>Solaris</strong> platforms</li>
+                            <li>Analyzed and resolved server, hardware, application, and OS issues under strict availability and security requirements</li>
+                            <li>Used <strong>Ansible</strong> to automate configuration and operational tasks across heterogeneous Unix environments</li>
+                            <li>Monitored system performance and ensured compliance with security and operational standards in production</li>
                         </ul>
                     </div>
                 </div>
@@ -241,7 +253,7 @@
                             <h3>Computer Technician</h3>
                             <p class="company-name">Cisco NetAcad</p>
                             <p class="duration">January 2018 - June 2018</p>
-                            <p class="location">📍 Veliko Tarnovo, Bulgaria</p>
+                            <p class="location">Veliko Tarnovo, Bulgaria</p>
                         </div>
                     </div>
                     <div class="responsibilities">
@@ -259,8 +271,21 @@
 
         <!-- Education Section -->
         <section class="section" id="education">
-            <h2>🎓 Education & Training</h2>
+            <h2>Education & Training</h2>
             <div class="education-grid">
+                <div class="education-item">
+                    <h3>Microsoft Certified: Azure Fundamentals</h3>
+                    <p class="institution">Microsoft Learn, Online</p>
+                    <ul>
+                        <li>Understanding of cloud computing models, deployment options, and shared responsibility in Azure environments</li>
+                        <li>Knowledge of core Azure services for compute, storage, networking, and database workloads</li>
+                        <li>Overview of Azure architecture, including regions, availability zones, and resource organization</li>
+                        <li>Familiarity with Azure identity, access management, security, and compliance fundamentals</li>
+                        <li>Understanding of Azure cost management, monitoring, and governance tools for cloud operations</li>
+                        <li>Ability to describe how Azure management and deployment tools support scalable infrastructure delivery</li>
+                    </ul>
+                </div>
+
                 <div class="education-item">
                     <h3>Kubernetes</h3>
                     <p class="institution">Software University (SoftUni), Sofia, Bulgaria</p>
@@ -406,8 +431,16 @@
 
         <!-- Certifications Section -->
         <section class="section" id="certifications">
-            <h2>📜 Professional Certifications</h2>
+            <h2>Professional Certifications</h2>
             <div class="certificates">
+                <div class="certificate">
+                    <h3>Microsoft Certified: Azure Fundamentals</h3>
+                    <a href="https://learn.microsoft.com/en-gb/users/hristohristov-4986/credentials/36538c02e6450157" target="_blank" rel="noopener noreferrer">
+                        <img src="certifications/microsoft-logo.png" alt="Microsoft" class="issuer-logo">
+                        <img src="certifications/azure-fundamentals-badge.svg" alt="Microsoft Certified: Azure Fundamentals Badge" class="certificate-image certificate-badge">
+                    </a>
+                </div>
+
                 <div class="certificate">
                     <h3>Linux System Administration</h3>
                     <a href="https://softuni.bg/certificates/details/107886/ce645825" target="_blank" rel="noopener noreferrer">
@@ -500,7 +533,7 @@
 
         <!-- Languages Section -->
         <section class="section" id="languages">
-            <h2>🗣️ Languages</h2>
+            <h2>Languages</h2>
             <div class="languages-grid">
                 <div class="language-item">
                     <h3>Bulgarian</h3>
@@ -515,25 +548,30 @@
 
         <!-- Skills Section -->
         <section class="section" id="skills">
-            <h2>🧩 Technical Skills</h2>
+            <h2>Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>🖥️ Scripting & Automation</h3>
+                    <h3>Scripting & Automation</h3>
                     <p>Proficient in <strong>Bash</strong> and <strong>Python</strong>, adept at writing scripts for automation and system management. Experienced with <strong>Jenkins</strong> and <strong>GitHub Actions</strong>, capable of setting up and managing CI/CD pipelines.</p>
                 </div>
 
                 <div class="skill-category">
-                    <h3>🗄️ Databases & Web Servers</h3>
-                    <p>Skilled in managing and querying <strong>MariaDB</strong> and <strong>MS SQL</strong>, with a solid understanding of database design and optimization. Knowledgeable in configuring and maintaining <strong>Apache</strong> and <strong>Nginx</strong>.</p>
+                    <h3>Databases & Web Servers</h3>
+                    <p>Skilled in managing and querying <strong>PostgreSQL</strong>, <strong>MariaDB</strong>, and <strong>MS SQL</strong>, with a solid understanding of database design and optimization. Knowledgeable in configuring and maintaining <strong>Apache</strong> and <strong>Nginx</strong>.</p>
                 </div>
 
                 <div class="skill-category">
-                    <h3>☁️ Infrastructure & Cloud</h3>
-                    <p>Familiar with <strong>Vagrant</strong> and <strong>Terraform</strong> for provisioning and managing infrastructure in a reproducible and scalable manner. Experienced in using <strong>Docker</strong> and <strong>Kubernetes</strong> for container orchestration.</p>
+                    <h3>Observability & Incident Management</h3>
+                    <p>Hands-on experience with <strong>Dynatrace</strong>, <strong>Azure Log Analytics</strong>, and <strong>KQL</strong> for incident investigation and root-cause analysis. Skilled in <strong>ServiceNow</strong> integrations for automated alerting and incident workflows, including large-scale migrations from legacy tooling such as PagerDuty.</p>
                 </div>
 
                 <div class="skill-category">
-                    <h3>🔧 System Administration</h3>
+                    <h3>Infrastructure & Cloud</h3>
+                    <p>Experienced with <strong>Azure</strong>, <strong>Azure DevOps</strong>, <strong>Docker</strong>, and <strong>Kubernetes</strong> in production banking environments. Familiar with <strong>Terraform</strong> and <strong>Ansible</strong> for reproducible, scalable infrastructure delivery.</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3>System Administration</h3>
                     <p>Comprehensive skills in <strong>system administration</strong>, including server management, monitoring, and troubleshooting to ensure optimal system performance and reliability.</p>
                 </div>
             </div>
@@ -542,12 +580,8 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Hristo Hristov. All rights reserved.</p>
-        <p>Built with ❤️ and modern web technologies</p>
+        <p>&copy; 2026 Hristo Hristov</p>
     </footer>
-
-    <!-- Particle Animation Container -->
-    <div id="anonymous"></div>
 
     <!-- Scripts -->
     <script src="script.js"></script>
