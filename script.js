@@ -206,7 +206,73 @@ class LoadingManager {
     }
 }
 
-// Header Scroll Management
+// Mobile Navigation Menu
+class MobileMenu {
+    constructor() {
+        this.header = document.querySelector('header');
+        this.toggle = document.getElementById('mobile-menu-toggle');
+        this.nav = document.getElementById('header-nav');
+        this.navLinks = document.querySelectorAll('.header-nav .nav-link');
+
+        if (this.toggle && this.nav) {
+            this.init();
+        }
+    }
+
+    init() {
+        this.toggle.addEventListener('click', () => this.toggleMenu());
+
+        this.navLinks.forEach((link) => {
+            link.addEventListener('click', () => this.closeMenu());
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                this.closeMenu();
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!this.nav.classList.contains('is-open')) {
+                return;
+            }
+
+            const clickedInsideMenu = this.nav.contains(event.target) || this.toggle.contains(event.target);
+            if (!clickedInsideMenu) {
+                this.closeMenu();
+            }
+        });
+    }
+
+    toggleMenu() {
+        if (this.nav.classList.contains('is-open')) {
+            this.closeMenu();
+        } else {
+            this.openMenu();
+        }
+    }
+
+    openMenu() {
+        this.nav.classList.add('is-open');
+        this.toggle.classList.add('is-open');
+        this.toggle.setAttribute('aria-expanded', 'true');
+        this.toggle.setAttribute('aria-label', 'Close navigation menu');
+        document.body.classList.add('mobile-nav-open');
+
+        if (this.header) {
+            this.header.classList.remove('header-hidden');
+        }
+    }
+
+    closeMenu() {
+        this.nav.classList.remove('is-open');
+        this.toggle.classList.remove('is-open');
+        this.toggle.setAttribute('aria-expanded', 'false');
+        this.toggle.setAttribute('aria-label', 'Open navigation menu');
+        document.body.classList.remove('mobile-nav-open');
+    }
+}
+
 class HeaderScrollManager {
     constructor() {
         this.header = document.querySelector('header');
@@ -220,6 +286,11 @@ class HeaderScrollManager {
     }
 
     handleScroll() {
+        if (document.body.classList.contains('mobile-nav-open')) {
+            this.showHeader();
+            return;
+        }
+
         const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
         // Show header when at the top
@@ -263,6 +334,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize smooth scrolling
     new SmoothScrolling();
+
+    // Initialize mobile navigation
+    new MobileMenu();
     
     // Initialize interactive elements
     new InteractiveElements();
