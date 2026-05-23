@@ -604,6 +604,17 @@ header.header-hidden {
         box-sizing: border-box;
         overflow-x: hidden;
     }
+
+    header {
+        padding: 1rem max(1.25rem, env(safe-area-inset-right)) 1rem max(1.25rem, env(safe-area-inset-left));
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        width: 100%;
+        box-sizing: border-box;
+    }
     
     /* Hide navigation on mobile until menu is opened */
     .header-nav {
@@ -617,6 +628,7 @@ header.header-hidden {
     .header-content {
         position: relative;
         align-items: stretch;
+        padding: 0 0.25rem;
     }
 
     .profile-container {
@@ -690,7 +702,7 @@ header.header-hidden {
 /* Mobile header improvements - Updated */
 @media (max-width: 768px) {
     header {
-        padding: 1rem 0.5rem;
+        padding: 1rem max(1.25rem, env(safe-area-inset-right)) 1rem max(1.25rem, env(safe-area-inset-left));
         position: fixed;
         top: 0;
         left: 0;
@@ -707,6 +719,7 @@ header.header-hidden {
         gap: 0;
         max-width: 100%;
         width: 100%;
+        padding: 0 0.25rem;
     }
     
     .profile-container {
@@ -760,7 +773,7 @@ header.header-hidden {
     }
     
     header {
-        padding: 0.5rem;
+        padding: 0.75rem max(1rem, env(safe-area-inset-right)) 0.75rem max(1rem, env(safe-area-inset-left));
     }
     
     .header-content {
@@ -1481,7 +1494,7 @@ footer p {
 @media (max-width: 480px) {
     header {
         width: 100%;
-        padding: 1.5em 0;
+        padding: 1rem max(1.25rem, env(safe-area-inset-right)) 1rem max(1.25rem, env(safe-area-inset-left));
         margin: 0;
     }
 
